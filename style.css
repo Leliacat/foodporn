@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0; }
+  
+*,
+*::before,
+*::after {
+    box-sizing: border-box; }
+  
+html, body {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    font-family: 'Raleway';
+    font-size: 1.3rem;
+    line-height: 1.4;
+    --header-bg-color:rgb(98, 0, 238, .5);
+    
+    
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*************************************************** HEADER/MENU ***************************************************/
+
+.header {
+    position: fixed;
+    left : 0;
+    right: 0;
+    height: 4rem;
+    line-height: 4rem;
+    color: #FFF;
+    background-color: var(--header-bg-color);
+    /* border-bottom: 3px solid #000;  */
+    border-bottom: 8px solid #9CB0AC;
+}
+
+.header_logo{
+    font-weight: bold;
+    padding: 1.2rem 2.5rem;
+    float: left;
+}
+
+
+nav.header_menu>a{
+    padding:  0 1rem;
+    font-weight: 800;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+}
+
+nav.header_menu>a:hover{
+    color: 	rgba(3, 218, 197, 1);
+}
+
+/**************************************************** GENERAL/CONTAINERS **************************************************/
+
+.ctnr_gradient {
+    /* background: rgba(0,0,0,0.2); */
+    /* box-shadow: 0 0 200px rgba(0,0,0,0.3) inset; */
+    background-image:linear-gradient(to right, rgba(0,0,0,0.25), #e3e4e6, rgba(0,0,0,0.2));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.site_content{
+    padding-top: 4.3rem;
+}
+
+.ctnr_1{
+    margin-top: -.5rem;
+    display: flex;
+}
+
+.ctnr_2{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/***************************************************** HEADER/SECTION *************************************************/
+
+.content_title{
+    display: block;
+    height: 10rem;
+    width: 100vw;
+    flex-grow: 1;
+    padding : 3.5rem 2rem 2rem 28rem;
+    margin-left: -28rem;
+    margin-bottom: 4rem;
+    border-bottom: 5px solid #9CB0AC;
+    color: #FFF;
+    background-image:linear-gradient( to top, rgba(3, 218, 197, .5),rgba(3, 218, 197, 0));
+    text-shadow: 2px 2px rgb(156, 176, 172, .7);
+    /* text-shadow: 2px 2px rgba(0, 0, 0, .3); */
+}
+
+.title{
+    letter-spacing: .3rem;
+}
+
+.subtitle{
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+}
+
+.content_img{
+    height: 25rem;
+    width: 21rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    border: 2px solid rgb(0, 0, 0);
+    /* border: 2px solid rgb(155, 175, 171); */
+    overflow: visible;
+    z-index: 999;
+    
+}
+
+.ctnr_secundary{
+    margin-left: 3rem;
+}
+
+#words_composition{
+    margin-bottom: 6rem;
+    font-size: 1rem;
+    display: grid;
+    grid-template-rows: 4.5rem 2rem 3rem 2.5rem 4rem 1rem;
+    grid-template-columns: 6rem 7rem 5rem 4rem 9rem  ;
+}
+
+/*FONTS*/
+/* font-family: 'Cantarell', sans-serif;
+font-family: 'Cherry Cream Soda', cursive;
+font-family: 'Creepster', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Artifika', serif;
+font-family: 'Marko One', serif;
+font-family: 'Iceberg', cursive;
+font-family: 'Aubrey', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Varela Round', sans-serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Michroma', sans-serif;
+font-family: 'Anonymous Pro', monospace;
+font-family: 'Reem Kufi', sans-serif;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Bungee', cursive; 
+font-family: 'New Rocker', cursive;
+font-family: 'Irish Grover', cursive;
+font-family: 'Passero One', cursive;
+font-family: 'Bungee Outline', cursive;
+font-family: 'Amarante', cursive;
+font-family: 'Rosarivo', serif;
+font-family: 'Titan One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Rock Salt', cursive;
+font-family: 'Titan One', cursive;
+font-family: 'Bungee Shade', cursive;
+font-family: 'Kirang Haerang', cursive;
+font-family: 'Ruslan Display', cursive;
+font-family: 'Irish Grover', cursive;
+font-family: 'Henny Penny', cursive;
+font-family: 'Arbutus', cursive;
+font-family: 'New Rocker', cursive;
+font-family: 'Ribeye Marrow', cursive;
+font-family: 'Passero One', cursive;
+font-family: 'Trochut', cursive;
+font-family: 'Bungee Hairline', cursive;*/
+#grid_item_1{
+    font-size: 3rem;
+    font-family: 'Rosarivo', serif;
+}
+#grid_item_2{
+    font-size: 2rem;
+    font-family: 'Aubrey', cursive;
+}
+#grid_item_3{
+    font-size: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+#grid_item_4{
+    font-size: 1.7rem;
+    font-family: 'Marko One', serif;
+}
+#grid_item_5{
+    font-size: 2.1rem;
+    font-family: 'Reem Kufi', sans-serif;
+}
+#grid_item_6{
+    font-size: 2.9rem;
+    font-family: 'Irish Grover', cursive;
+}
+#grid_item_7{
+    font-size: 1.5rem;
+    font-weight:  300;
+    font-family: 'Titan One', cursive;
+}
+#grid_item_8{
+    font-size: 1.3rem;
+    font-family: 'Creepster', cursive;
+}
+#grid_item_9{
+    font-size: 3.2rem;
+    font-family: 'New Rocker', cursive;
+}
+#grid_item_10{
+    font-size: .9rem;
+    font-family: 'Passero One', cursive;
+}
+#grid_item_11{
+    font-size: 2.3rem;
+    font-family:'Bungee Inline', cursive;
+}
+#grid_item_12{
+    font-size: 2.5rem;
+    font-family: 'Iceberg', cursive;
+}
+#grid_item_13{
+    font-size: 1.7rem;
+    font-family: 'Amarante', cursive;
+}
+#grid_item_14{
+    font-size: 2.1rem;
+    font-family: 'Cherry Cream Soda', cursive;
+}
+
+
+
+
+/***************************************************** SECTIONS *************************************************/
+.ctnr_section {
+    width: 35rem;
+    border-radius: .2rem;
+    margin-bottom: 1rem;
+    background-image:  linear-gradient(rgba(3, 218, 197, .15),rgb(156, 176, 172, 0));
+}
+
+.content_section_title{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: .2rem;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+.content_infos{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: space-around;
+
+    border-radius: .5rem;
+    padding: 1.5rem 3rem ;
+    margin: 1rem;
+    font-family: "Raleway"; 
+    color: rgb(82, 81, 81);
+    font-weight: 500;
+
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.contactInfo_text{
+    font-size: .8rem;
+    max-width: 40rem;
+}
+
+.content_icons{
+    height: 4rem;
+    width: auto;
+}
+
+.info_item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.svg_icon{
+    height: 1.8rem;
+    margin: .4rem 1rem .4rem 0;  
+}
+
+.icon_star{
+    height: 1.7rem;
+    margin: 0 -.2rem;
+}
+
+.date{
+    font-size: 1rem;
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.date_exp {
+    font-size: 1rem;
+    width: 9rem;
+    margin-right: 1rem;
+}
+
+.description {
+    width: 16rem;
+    padding-bottom: .7rem;
+}
+
+.education_item {
+    padding-bottom: .5rem;
+}
+
+
+
+/* #experience {
+    background-image: linear-gradient(rgba(3, 218, 197, .15),rgb(156, 176, 172, .1)), url('./img/stonecarving2.png');
+    background-size: contain repeat;
+}
+
+#contact {
+    background-image: linear-gradient(rgba(3, 218, 197, .15),rgb(156, 176, 172, .1)), url('./img/workinggirl.png');
+    background-size: contain ;
+}
+
+#skills {
+    background-image: linear-gradient(rgba(3, 218, 197, .15),rgb(156, 176, 172, .1)), url('./img/blackcat.png');
+    background-size: contain ;
+} */
+
+#about {
+    display: grid;
+    grid-template-rows: 2rem 4;
+    grid-template-columns: 4rem 3;
+}
+
+#language {
+    height: 5rem;
+    width: 30rem;
+}
+
+#stonecarving_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#blackcat_img{
+    height: 11rem;
+    margin-top: 9rem;
+    margin-left: 10rem;
+}
+#creativity_img{
+    height: 16rem;
+    margin-top: -2rem;
+    margin-left: 3rem;
+}
+#workinggirl_img{
+    height: 15rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px){
+    .site_content{
+        padding-top: 0;
+    }
+
+    .ctnr {
+        padding-top: 3rem;
+    }
+
+    .header{
+        position: static;
+    }
+
+    .header_icon{
+        position: relative;
+        display: block;
+        float: left;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+
+    .header_icon::after{
+        content:'';
+        position: absolute;
+        display: block;
+        top: .7rem;
+        left: .7rem;
+        width: 1.4rem;
+        height: 0;
+        box-shadow: 0 10px 0 2px #FFF, 0 18px 0 2px #FFF, 0 26px 0 2px #FFF;
+    }
+
+    .header_menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25rem;
+        background-color: var(--header-bg-color);
+        filter: brightness(85%);
+        transform: translateX(-25rem);
+    }
+
+    nav.header_menu>a {
+        display: block;
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        border-bottom: 3px solid #FFF;
+    }
+
+    .width_sidebar {
+        transform: translateX(0);
+    }
+}
