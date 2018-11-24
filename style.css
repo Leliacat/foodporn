@@ -1,3 +1,5 @@
+@import url('./responsive.css');
+
 * {
     margin: 0;
     padding: 0; }
@@ -39,8 +41,11 @@ a{
     padding: 1.2rem 2.5rem;
     float: left;
 }
+nav{
+    display: flex;
+}
 nav.header_menu>a{
-    display: inline-block;
+    display: block;
     padding:  0 1rem;
     font-weight: 800;
     font-size: .8rem;
@@ -56,11 +61,10 @@ nav.header_menu>a:hover{
 
 .ctnr_gradient {
     width: 100vw;
-    background-image:linear-gradient(to right, rgba(0,0,0,0.15), #FFF, rgba(0,0,0,0.1));
+    background-image:linear-gradient(to right, rgba(0,0,0,0.15), rgba(255, 255, 255,.3), rgba(0,0,0,0.1));
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 5rem;
-    /* z-index:-1; */
 }
 .site_content{
     padding-top: 4.3rem;
@@ -75,14 +79,15 @@ nav.header_menu>a:hover{
     align-content: flex-start;
     flex-wrap: wrap;
 }
-#panda_cute{
+#glossy_cat{
     height: 4.5rem;
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
     transition: all .2s;
+    z-index: 999;
 }
-#panda_cute:hover{
+#glossy_cat:hover{
     outline: .4rem double rgba(3, 218, 197, .3);
     transform: scale(1.05) translateY(-.2rem);
     box-shadow: 0 2.5rem 4rem rgba(rgb(0, 0, 0), .5);
@@ -96,125 +101,102 @@ nav.header_menu>a:hover{
     width: 100vw;
     flex-grow: 1;
     padding : 3rem 2rem 2rem 28rem;
-    margin-left: -26.7rem;
+    margin-left: -23rem;
     margin-bottom: 2.5rem;
     border-bottom: 5px solid #9CB0AC;
     color: #FFF;
-    background-image:linear-gradient( to top, rgba(3, 218, 197, 1),rgba(3, 218, 197, 0));
+    background-image:linear-gradient( to top, rgba(3, 218, 197, 1),rgba(255, 255, 255,0));
     text-shadow: 2px 2px rgba(156, 176, 172, .7);
+    transition: all .2s;
+    letter-spacing: .3rem;
 }
 .title{
-    letter-spacing: .3rem;
+    transition: all .2s;
+}
+.title:hover{
+    transform: scale(1.05) translateX(.4rem);
 }
 .subtitle{
     font-size: 1.4rem;
-    letter-spacing: .3rem;
 }
 .content_img{
-    /* height: 25rem; */
     height: 22rem;
     width: 21rem;
-    margin: 2rem;
+    margin: 2rem 0 2rem 2rem;
     border-radius: .5rem;
     border: 2px solid rgb(0, 0, 0);
     overflow: visible;
     z-index: 999;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    transition: transform .3s;
+    transition: all .2s;
 }
 .content_img:hover {
     transform: translateY(-.5rem) scale(1.03);
+    box-shadow: 0px 3px 22px rgba(0,0,0,0.3);
+}
+#eyeball1{
+    position: absolute;
+    height: 4rem;
+    top: 10.65rem;
+    left: 13.9rem;
+    z-index: 99990;
+}
+#eyeball2{
+    position: absolute;
+    height: 4rem;
+    top: 10.65rem;
+    left: 7.15rem;
+    z-index: 99999;
+}
+.hidden_eye{
+    visibility: hidden;
 }
 .ctnr_secundary{
-    margin-left: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7rem;
 }
 #words_composition{
-    margin-bottom: 6rem;
+    
     font-size: 1rem;
     display: grid;
     grid-template-rows: repeat(8, 1.5rem) ;
     grid-template-columns: repeat(9, 3rem);
     grid-gap: 1rem;
+    z-index:888;
 }
 #creativity_img{
+    z-index: -1;
     height: 22rem;
     grid-column-start: 2;
-    opacity: .5;
+    opacity: .6;
 }
-
-/*FONTS*/
-/* font-family: 'Cantarell', sans-serif;
-font-family: 'Cherry Cream Soda', cursive;
-font-family: 'Creepster', cursive;
-font-family: 'Comfortaa', cursive;
-font-family: 'Artifika', serif;
-font-family: 'Marko One', serif;
-font-family: 'Iceberg', cursive;
-font-family: 'Aubrey', cursive;
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Varela Round', sans-serif;
-font-family: 'Prompt', sans-serif;
-font-family: 'Orbitron', sans-serif;
-font-family: 'Michroma', sans-serif;
-font-family: 'Anonymous Pro', monospace;
-font-family: 'Reem Kufi', sans-serif;
-font-family: 'Bungee Inline', cursive;
-font-family: 'Bungee', cursive; 
-font-family: 'New Rocker', cursive;
-font-family: 'Irish Grover', cursive;
-font-family: 'Passero One', cursive;
-font-family: 'Bungee Outline', cursive;
-font-family: 'Amarante', cursive;
-font-family: 'Rosarivo', serif;
-font-family: 'Titan One', cursive;
-font-family: 'Pacifico', cursive;
-font-family: 'Orbitron', sans-serif;
-font-family: 'Rock Salt', cursive;
-font-family: 'Titan One', cursive;
-font-family: 'Bungee Shade', cursive;
-font-family: 'Kirang Haerang', cursive;
-font-family: 'Ruslan Display', cursive;
-font-family: 'Irish Grover', cursive;
-font-family: 'Henny Penny', cursive;
-font-family: 'Arbutus', cursive;
-font-family: 'New Rocker', cursive;
-font-family: 'Ribeye Marrow', cursive;
-font-family: 'Passero One', cursive;
-font-family: 'Trochut', cursive;
-font-family: 'Bungee Hairline', cursive;
-font-family: 'Pacifico', cursive;
-font-family: 'Orbitron', sans-serif;
-font-family: 'Rock Salt', cursive;
-font-family: 'Titan One', cursive;
-font-family: 'Bungee Shade', cursive;
-font-family: 'Kirang Haerang', cursive;
-font-family: 'Ruslan Display', cursive;
-font-family: 'Irish Grover', cursive;
-font-family: 'Henny Penny', cursive;
-font-family: 'Arbutus', cursive;
-font-family: 'New Rocker', cursive;
-font-family: 'Ribeye Marrow', cursive;
-font-family: 'Passero One', cursive;
-font-family: 'Trochut', cursive;
-font-family: 'Bungee Hairline', cursive;
-font-family: 'Sacramento', cursive;
-font-family: 'Crafty Girls', cursive;
-font-family: 'Creepster', cursive;
-font-family: 'Sancreek', cursive;
-font-family: 'Frijole', cursive;
-font-family: 'Cormorant Upright', serif;
-font-family: 'Aldrich', sans-serif;
-font-family: 'Italianno', cursive;
-font-family: 'Eater', cursive;
-font-family: 'Fondamento', cursive;
-font-family: 'UnifrakturMaguntia', cursive;
-font-family: 'Bilbo Swash Caps', cursive;
-font-family: 'Iceland', cursive;
-font-family: 'Nosifer', cursive;
-font-family: 'Baloo Chettan', cursive;
-font-family: 'Coiny', cursive;
-font-family: 'Tangerine', cursive;
-font-family: 'Calligraffitti', cursive;*/
+.growable{
+    display: inline-block;
+    transition: all .3s;
+}
+.growable:hover{
+    transform:  scale(1.2);
+}
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+/* FONTS */
+/* _ 'Cantarell', sans-serif; _ 'Cherry Cream Soda', cursive; _ 'Creepster', cursive; _ 'Comfortaa', cursive; _ 
+'Artifika', serif; _ 'Marko One', serif; _ 'Iceberg', cursive; _ 'Aubrey', cursive; _ 'Josefin Sans', sans-serif; _ 
+'Varela Round', sans-serif; _ 'Prompt', sans-serif; _ 'Orbitron', sans-serif; _ 'Michroma', sans-serif; _ 
+'Anonymous Pro', monospace; _ 'Reem Kufi', sans-serif; _ 'Bungee Inline', cursive; _ 'Bungee Outline', cursive; _ 
+'Bungee', cursive;  _ 'Bungee Hairline', cursive; _ 'Bungee Shade', cursive; _ 'Passero One', cursive; _ 
+'Amarante', cursive; _ 'Rosarivo', serif; _ 'Titan One', cursive; _ 'Pacifico', cursive; _ 'Rock Salt', cursive; _ 
+'Kirang Haerang', cursive; _ 'Ruslan Display', cursive; _ 'Irish Grover', cursive; _ 'Henny Penny', cursive; _ 
+'Arbutus', cursive; _ 'New Rocker', cursive; _ 'Ribeye Marrow', cursive; _ 'Trochut', cursive; _ 
+'Sacramento', cursive; _ 'Crafty Girls', cursive; _ 'Sancreek', cursive; _ 'Frijole', cursive; _ 
+'Cormorant Upright', serif; _ 'Aldrich', sans-serif; _ 'Italianno', cursive; _ 'Eater', cursive; _ 
+'Fondamento', cursive; _ 'UnifrakturMaguntia', cursive; _ 'Bilbo Swash Caps', cursive; _ 'Iceland', cursive; _ 
+'Nosifer', cursive; _ 'Baloo Chettan', cursive; _ 'Coiny', cursive; _ 'Tangerine', cursive; _ 
+'Calligraffitti', cursive;*/
 #grid_item_1{
     font-size: 2rem;
     font-family: 'Rosarivo', serif;
@@ -341,11 +323,10 @@ font-family: 'Calligraffitti', cursive;*/
     border-radius: .5rem;
     margin-bottom: 2rem;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    background-image:  linear-gradient(rgba(3, 218, 197, .1),rgba(156, 176, 172, 0));
+    background-image:  linear-gradient(rgba(3, 218, 197, .1),rgba(255, 255, 255,.2));
     z-index: 88;
     transition: all 4s;
-	-webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	
 }
 .content_section_title{
     text-align: center;
@@ -353,13 +334,11 @@ font-family: 'Calligraffitti', cursive;*/
 }
 legend {
     background-color:rgba(3, 218, 197, 1);
-    /* background-color:rgb(98, 0, 238, 1); */
     color: #fff;
     font-weight: 500;
     padding: .2rem 3rem;
     border-radius: .2rem;
-    font-weight: 600;
-    
+    font-weight: 600;  
 }
 .output {
     font: 1rem 'Fira Sans', sans-serif;
@@ -380,22 +359,19 @@ input {
     font-family: "Raleway"; 
     color: rgb(44, 43, 43);
     font-weight: 500;
-
+    
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
 }
-
 .contactInfo_text{
     font-size: .8rem;
     max-width: 40rem;
 }
-
 .content_icons{
     height: 4rem;
     width: auto;
 }
-
 .info_item {
     display: flex;
     justify-content: start;
@@ -431,6 +407,8 @@ input {
     color: rgba(98, 0, 238, .4);
     padding-bottom: .2rem;
     font-weight: 600;
+    transition: all .1s;
+    
 }
 .description {
     width: 16rem;
@@ -484,12 +462,15 @@ input {
 .footer_ctnr{
     position: relative;
 }
-#avatarfullbody{
+.avatar_footer{
     position: absolute;
     bottom: -9rem;
     left: 0;
-    height: 25rem;
+    height: 23rem;
     z-index: 98;
+}
+#avatarfullbody2{
+    /* opacity: .6; */
 }
 #carebear{
     z-index: 99;
@@ -501,38 +482,41 @@ input {
 }
 
 /***************************************************** ANIMATIONS *************************************************/
-/* ----------------------------------------------
- * Generated by Animista on 2018-11-23 12:3:9
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 
-/**
- * ----------------------------------------
- * animation slide-fwd-center
- * ----------------------------------------
- */
- @-webkit-keyframes slide-fwd-center {
-    0% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-    }
-    100% {
-      -webkit-transform: translateZ(160px);
-              transform: translateZ(160px);
-    }
-  }
-  @keyframes slide-fwd-center {
-    0% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-    }
-    100% {
-      -webkit-transform: translateZ(160px);
-              transform: translateZ(160px);
-    }
-  }
+
   
-
+  @-webkit-keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
 
 /***************************************************** PARTICLE.JS *************************************************/
 
@@ -548,54 +532,4 @@ input {
     z-index: -1;
   } 
 
-
-  /***************************************************** RESPONSIVE *************************************************/
-@media only screen and (max-width: 800px){
-    .site_content{
-        padding-top: 0;
-    }
-    .ctnr {
-        padding-top: 3rem;
-    }
-    .header{
-        position: static;
-    }
-    .header_icon{
-        position: relative;
-        display: block;
-        float: left;
-        width: 3rem;
-        height: 3rem;
-        cursor: pointer;
-    }
-    .header_icon::after{
-        content:'';
-        position: absolute;
-        display: block;
-        top: .7rem;
-        left: .7rem;
-        width: 1.4rem;
-        height: 0;
-        box-shadow: 0 10px 0 2px #FFF, 0 18px 0 2px #FFF, 0 26px 0 2px #FFF;
-    }
-    .header_menu {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 25rem;
-        background-color: var(--header-bg-color);
-        filter: brightness(85%);
-        transform: translateX(-25rem);
-    }
-    nav.header_menu>a {
-        display: block;
-        height: 4rem;
-        line-height: 4rem;
-        text-align: center;
-        border-bottom: 3px solid #FFF;
-    }
-    .width_sidebar {
-        transform: translateX(0);
-    }
-}
+ 

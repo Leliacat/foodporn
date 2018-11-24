@@ -22,7 +22,8 @@ particlesJS("particles-js", {
       polygon: { nb_sides: 5 },
       image: {
         src:
-        "./img/carbare.png",
+        // "./img/carbare.png",
+        "./img/eyeballll.png",
         //   "https://i.pinimg.com/originals/c2/a8/2b/c2a82b09550741f013a47c3edb75efa2.png",
         width: 10,
         height: 10
@@ -71,11 +72,6 @@ particlesJS("particles-js", {
 });
 
 update = function() {
-  stats.begin();
-  stats.end();
-  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-  }
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
