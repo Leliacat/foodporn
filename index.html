@@ -20,16 +20,13 @@
 <body id='cv_body'>
     <header class="header">
         <a href="#" id='header_icon' class="header_icon"></a>
-        <a href="#" id='header_logo' class="header_logo">
-                
-          <!-- <img src="./img/glossy_cat.png" alt="" class="blue_cat_logo">   -->
-        </a>
+        <a href="#" id='header_logo' class="header_logo"></a>
         <nav id='header_menu' class="header_menu">
-            <a href="" class="menu_item">Contact Infos</a>
-            <a href="" class="menu_item">Skills</a>
-            <a href="" class="menu_item">Experience</a>
-            <a href="" class="menu_item">Education</a>
-            <a href="" class="menu_item">About me</a>
+            <span  class="menu_item">Contact Infos</span>
+            <span  class="menu_item">Skills</span>
+            <span  class="menu_item">Experience</span>
+            <span  class="menu_item">Education</span>
+            <span  class="menu_item">About me</span>
         </nav>
     </header>
 
@@ -47,10 +44,14 @@
                 <div id="ctnr_image_portrait">
 
                 </div>
-                <img src="./img/avatarkawaii.png" alt="cyclop" class="content_img"> 
+                <img src="./img/avatarkawaii.png" alt="profile picture" class="portrait_img" id="profile_pic"> 
                 <img src="./img/eyeballll.png" alt="eyeball" class='hidden_eye' id="eyeball1">
                 <img src="./img/eyeballll.png" alt="eyeball" class='hidden_eye' id="eyeball2">
-                <img src="./img/glossy_cat.png" alt="" id="glossy_cat"> 
+
+                <a href="#" id='glossy_cat_link' class="glossy_cat_link">
+                    <img src="./img/glossy_cat.png" alt="" id="glossy_cat"> 
+                </a>
+                
                 
 
                 <div class="ctnr_secundary">
@@ -63,21 +64,21 @@
                         
                         <img src="./img/creativity2.png" alt="" id="creativity_img">
                         
-                        <div class="growable pulse" id="grid_item_1">Javascript</div>
-                        <div class="growable pulse" id="grid_item_2">rigor</div>
-                        <div class="growable pulse" id="grid_item_3">REACT forever</div>
-                        <div class="growable pulse" id="grid_item_4">creativity</div>
-                        <div class="growable pulse" id="grid_item_5">WEB</div>
-                        <div class="growable pulse" id="grid_item_6">Android</div>
-                        <div class="growable pulse" id="grid_item_7">KAWAII</div>
-                        <div class="growable pulse" id="grid_item_8">Monsters</div>
-                        <div class="growable pulse" id="grid_item_9">horror</div>
-                        <div class="growable pulse" id="grid_item_10">Mobile development</div>
-                        <div class="growable pulse" id="grid_item_11">Learning</div>
-                        <div class="growable pulse" id="grid_item_12">challenges</div>
-                        <div class="growable pulse" id="grid_item_13">solving</div>
-                        <div class="growable pulse" id="grid_item_14">TECH</div>
-                        <div class="growable pulse" id="grid_item_15">SMILE</div>
+                        <div class="growable grid_item" id="grid_item_1">Javascript</div>
+                        <div class="growable grid_item" id="grid_item_2">rigor</div>
+                        <div class="growable grid_item" id="grid_item_3">REACT forever</div>
+                        <div class="growable grid_item" id="grid_item_4">creativity</div>
+                        <div class="growable grid_item" id="grid_item_5">WEB</div>
+                        <div class="growable grid_item" id="grid_item_6">Android</div>
+                        <div class="growable grid_item" id="grid_item_7">KAWAII</div>
+                        <div class="growable grid_item" id="grid_item_8">Monsters</div>
+                        <div class="growable grid_item" id="grid_item_9">horror</div>
+                        <div class="growable grid_item" id="grid_item_10">Mobile development</div>
+                        <div class="growable grid_item" id="grid_item_11">Learning</div>
+                        <div class="growable grid_item" id="grid_item_12">challenges</div>
+                        <div class="growable grid_item" id="grid_item_13">solving</div>
+                        <div class="growable grid_item" id="grid_item_14">TECH</div>
+                        <div class="growable grid_item" id="grid_item_15">SMILE</div>
 
                     </div>
                 </div>
@@ -86,8 +87,8 @@
     
             <div class="ctnr_2">
                 
-                <fieldset class="ctnr_section slide_fwd_center">
-                <legend class="content_section_title ">Skills</legend>
+                <fieldset class="ctnr_section" id="skills_section">
+                <legend class="content_section_title">Skills</legend>
                     <div class="content_infos" id="skills">
                         <div class="info_item">
                             <img src="./img/svg/011-css-1.svg" alt="html/css" class="svg_icon">
@@ -227,7 +228,7 @@
                 </fieldset>
 
             
-                <fieldset class="ctnr_section" >
+                <fieldset class="ctnr_section" id="experience_section">
                     <legend class="content_section_title">Experience</legend>
                     <div class="content_infos" id='experience'>
                         <div class="info_item">
@@ -270,9 +271,9 @@
                 </fieldset>
 
 
-                <fieldset class="ctnr_section">
+                <fieldset class="ctnr_section" id="education_section">
                     <legend class="content_section_title">Education</legend>
-                    <div class="content_infos">
+                    <div class="content_infos" id="education">
                         <div class="info_item">
                             <img src="./img/philosophy.png" alt="" class="svg_icon">
                             <p class="date">2003</p>
@@ -311,7 +312,7 @@
                 </fieldset>
 
 
-                <fieldset class="ctnr_section">
+                <fieldset class="ctnr_section" id="about_section">
                     <legend class="content_section_title">About me</legend>
                     <div class="content_infos" id="about">
                         <div class="info_item">
@@ -343,11 +344,15 @@
                 </fieldset>
 
 
-                <fieldset class="ctnr_section">
+                <fieldset class="ctnr_section" id="contact_section">
                     <legend class="content_section_title">Contact Infos</legend>
                     
                     <div class="content_infos" id='contact'>
-                        <img src="./img/kawaiiiconme.png" alt="iconme" id="iconme">
+                        <div id="ctnr_contact_photoSwitch">
+                            <img src="./img/kawaiiiconme.png" alt="icon of me" id="iconme">
+                            <img src="./img/portraitMeCV.jpg" alt="my face" id="pictureOfMe">
+                        </div>
+                        
                         <div class="info_item">
                             <img src="./img/svg/025-phone-call.svg" alt="" class="svg_icon">
                             <p class="contactInfo_text">06.08.58.42.86</p>
@@ -376,10 +381,8 @@
 
     <footer class="footer">
         <div class="footer_ctnr">
-            <img src="./img/chibi_avatar_bubble_openeyes.png" alt="" id="avatarfullbody"class="avatar_footer">
-            <!-- <img src="./img/chibi_avatar_bubble_version1.png" alt="" id="avatarfullbody" class="avatar_footer"> -->
-            <img src="./img/chibi_avatar_bubble_closedeyes.png" alt="" id="avatarfullbody2" class="avatar_footer">
-            <!-- <img src="./img//carbare.png" alt="" id="carebear"> -->
+            <img src="./img/chibi_avatar_bubble_openeyes.png" alt="" id="avatarfooter_1"class="avatar_footer">
+            <img src="./img/chibi_avatar_bubble_closedeyes.png" alt="" id="avatarfooter_2" class="avatar_footer">
         </div>
         
     </footer>
