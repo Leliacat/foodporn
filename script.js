@@ -1,16 +1,51 @@
 window.onload = function(){
 
+/********************************************************* NAVIGATION *************************************************/
+
+const menu_items = document.getElementsByClassName('menu_item');
+     
+const menu_contact = menu_items[0];
+const menu_skills = menu_items[1];
+const menu_experience = menu_items[2];
+const menu_education = menu_items[3];
+const menu_about = menu_items[4];
+
+ const section_contact = document.getElementById('contact');   
+ const section_skills = document.getElementById('skills');
+ const section_experience = document.getElementById('experience'); 
+ const section_education = document.getElementById('education'); 
+ const section_about = document.getElementById('about'); 
+
+scrollIntoViewOptions = {behavior: 'smooth'};
+
+menu_contact.addEventListener('click', ()=>{
+  section_contact.scrollIntoView(scrollIntoViewOptions);
+});
+menu_skills.addEventListener('click', ()=>{
+  section_skills.scrollIntoView(scrollIntoViewOptions);
+});
+menu_experience.addEventListener('click', ()=>{
+  section_experience.scrollIntoView(scrollIntoViewOptions);
+});
+menu_education.addEventListener('click', ()=>{
+  section_education.scrollIntoView(scrollIntoViewOptions);
+});
+menu_about.addEventListener('click', ()=>{
+  section_about.scrollIntoView(scrollIntoViewOptions);
+});
+
+
 /***************************************************** MENU RESPONSIVE *************************************************/
 
-const header_menu = document.getElementById('header_menu');
 const header_icon = document.getElementById('header_icon');
 const menu = document.getElementById('header_menu');
 
-
 header_icon.addEventListener('click', ()=>{
-    console.log('header_icon has been clicked');
     menu.classList.toggle('width_sidebar');
+    console.log(menu.classList);
 });
+
+
 
 /***************************************************** PARTICLES JS *************************************************/
 
@@ -81,7 +116,6 @@ update = function() {
 };
 requestAnimationFrame(update);
 
-
 const switch_Img_Src = () => {
   let params_image;
   switch(params_particles.particles.shape.image.src){
@@ -106,7 +140,10 @@ footer_avatar_2.addEventListener('click', switch_Img_Src);
 
 particlesJS("particles-js", params_particles);
 
-/***************************************************** hide and show *************************************************/
+
+
+
+/***************************************************** HIDE & SHOW ELEMENTS *************************************************/
 
 /********************** delay an element apearance on screen *******************/
 const reactForever = document .getElementById('grid_item_3');
@@ -114,36 +151,36 @@ reactForever.style.transition = "all .3s";
 const appear = () => {reactForever.style.opacity = '1';};
 setTimeout(appear, 2500);
 
-
 /********************** avatar footer (open and close eyes) *******************/
-
 footer_avatar_2.addEventListener('click', () =>{
   footer_avatar_2.style.transition = "all .4s";
   footer_avatar_2.classList.toggle('hidden_image');
 });
 
+/*********************** hidden eyes in portrait (at top) **********************/
 const profilePic = document.getElementById('profile_pic');
 const leftEye = document.getElementById('eyeball1');
 const rightEye = document.getElementById('eyeball2');
 
-/*********************** hidden eyes in portrait (at top) **********************/
-
+// if (window.innerWidth > 750 ){
+//   console.log (window.innerWidth);
+// }
 profilePic.addEventListener('mouseenter', () => {
-    leftEye.style.transition = "all .3s";
-    rightEye.style.transition = "all .3s";
-    leftEye.classList.remove('hidden_eye');
-    rightEye.classList.remove('hidden_eye');
-});
+      leftEye.style.transition = "all .3s";
+      rightEye.style.transition = "all .3s";
+      leftEye.classList.remove('hidden_eye');
+      rightEye.classList.remove('hidden_eye');
+  });
 
-profilePic.addEventListener('mouseout', () => {
-  leftEye.style.transition = "all .2s";
-  rightEye.style.transition = "all .2s";
-  leftEye.classList.add('hidden_eye');
-  rightEye.classList.add('hidden_eye');
-});
+  profilePic.addEventListener('mouseout', () => {
+    leftEye.style.transition = "all .2s";
+    rightEye.style.transition = "all .2s";
+    leftEye.classList.add('hidden_eye');
+    rightEye.classList.add('hidden_eye');
+  });
 
-/********************* switch profile pic (contact infos) ********************/
 
+/******************** switch profile pic (contact infos) ********************/
 const photoSwitch = document.getElementById('ctnr_contact_photoSwitch');
 const pictureOfMe = document.getElementById('pictureOfMe');
 pictureOfMe.style.transition = "all .4s";
@@ -164,48 +201,7 @@ photoSwitch.addEventListener('click', ()=> {
 
 
 
-
-
-/***************************************************** navigation *************************************************/
-
-let menu_items = document.getElementsByClassName('menu_item');
-     
-const menu_contact = menu_items[0];
-const menu_skills = menu_items[1];
-const menu_experience = menu_items[2];
-const menu_education = menu_items[3];
-const menu_about = menu_items[4];
-
- const section_contact = document.getElementById('contact');   
- const section_skills = document.getElementById('skills');
- const section_experience = document.getElementById('experience'); 
- const section_education = document.getElementById('education'); 
- const section_about = document.getElementById('about'); 
-
-scrollIntoViewOptions = {behavior: 'smooth'};
-
-menu_contact.addEventListener('click', ()=>{
-  section_contact.scrollIntoView(scrollIntoViewOptions);
-});
-
-menu_skills.addEventListener('click', ()=>{
-  section_skills.scrollIntoView(scrollIntoViewOptions);
-});
-
-menu_experience.addEventListener('click', ()=>{
-  section_experience.scrollIntoView(scrollIntoViewOptions);
-});
-
-menu_education.addEventListener('click', ()=>{
-  section_education.scrollIntoView(scrollIntoViewOptions);
-});
-
-menu_about.addEventListener('click', ()=>{
-  section_about.scrollIntoView(scrollIntoViewOptions);
-});
-
-
- 
+/***************************************************** scroll stuff *************************************************/
 
 // method SCROLLINTOVIEW --> scrolls the element on which it's called into the visible area of the browser window.
 // Element.scrollIntoView()
@@ -234,8 +230,6 @@ menu_about.addEventListener('click', ()=>{
 // Defines horizontal alignment.
 // One of "start", "center", "end", or "nearest". Defaults to "nearest".
 
-
-
 // WINDOW.SCROLL
 // Fait glisser la fenêtre vers une position particulière du document
 // window.scroll(x-coord,y-coord)
@@ -249,19 +243,29 @@ menu_about.addEventListener('click', ()=>{
 // Pour se déplacer par pas dans la page, utilisez window.scrollBy. 
 // Jetez aussi un œil à window.scrollByLines et window.scrollByPages.
 
-
-/***************************************************** scroll stuff *************************************************/
 // ONSCROLL EVENT
 //object.addEventListener("scroll", myScript);
 
+/********************** check if an element in in view *********************/
 
+// La méthode Element.getBoundingClientRect() renvoie la taille d'un élément 
+// et sa position relative par rapport à la zone d'affichage (viewport).
+// La valeur renvoyée est un objet DOMRect qui contient uniquement les propriétés left, top, right et bottom, 
+// en lecture seule, qui décrivent la boîte de bordure (border-box) en pixels. 
+// Les valeurs désignées par top et left sont relatives au coin en haut à gauche de la zone d'affichage.
 
+/********************** effect triggred by scroll ************************/ 
 
-
-
-
-
-
+// const parall = () => {
+//   let triggerPoint = 150;
+//       yOffset = window.scrollY;
+//       if(yOffset >= triggerPoint){
+//           header.classList.add("minimized");
+//       }else{
+//           header.classList.remove("minimized");
+//       }
+//   };
+// window.addEventListener('scroll', parall);
 
 
 }
