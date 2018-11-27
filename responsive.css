@@ -1,8 +1,24 @@
-/* @media all and (max-width: 1690px) { ...}
-@media all and (max-width: 1280px) { ...}
-@media all and (max-width: 980px) { ... }
-@media all and (max-width: 736px) { ... }
-@media all and (max-width: 480px) { ... } */
+/*************************************************** 380px ***************************************************/
+/*************************************************************************************************************/
+
+@media only screen and (max-width: 380px) {
+    #contact, #skills{
+        width: 97vw !important;
+        padding: 0 !important;
+    }
+    fieldset #about{
+        padding-left: 2rem !important;
+    }
+    .svg_icon_contact{
+        margin: .5rem !important;
+    }
+    .ctnr_section{
+        width: 100vw !important;
+    }
+    .footer{
+        display: none;
+    }
+}
 
 
 /*************************************************** 540px ***************************************************/
@@ -23,17 +39,11 @@
         width: 15rem !important;
         margin-top: 4rem !important;
     }
-    #eyeball1{
-        margin-left: -5.5rem !important;
-    }
-    #eyeball2{
-        margin-left: -9.9rem !important;
-    }
     .avatar_footer{
       display: none;
     }
     .ctnr_section{
-        margin: 0 !important;
+        margin: 1rem 0 !important;
     }
     .title{
         font-size: 2rem;
@@ -72,6 +82,13 @@
 /*************************************************************************************************************/
 
 @media only screen and (max-width: 750px) {
+
+    #eyeball1{
+        display: none !important;
+    }
+    #eyeball2{
+        display: none !important;
+    }
     
     /******************************* cloud of tags ***************************/
     #words_composition{
